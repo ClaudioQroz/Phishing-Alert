@@ -1,0 +1,204 @@
+        :root {
+            --primary: #004B8D;      /* Azul André Guimarães */
+            --primary-dark: #003666; /* Azul Escuro Hover */
+            --accent: #E6F0F9;       /* Fundo Azul Claro */
+            --text: #333333;
+            --white: #FFFFFF;
+            --gray-light: #F4F6F9;
+            --gray-border: #e5e7eb;
+            --success: #22c55e;
+            --danger: #ef4444;
+            --warning: #facc15;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--gray-light);
+            color: var(--text);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* --- Header --- */
+        header {
+            background-color: var(--white);
+            padding: 1.5rem 3rem; 
+            text-align: left; 
+            border-bottom: 1px solid var(--gray-border);
+            box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+            display: flex; 
+            justify-content: flex-start; 
+            align-items: center;
+        }
+
+        header img {
+            height: 120px; 
+            object-fit: contain;
+        }
+
+        /* --- Main Content Area --- */
+        main {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem 1rem;
+            width: 100%;
+        }
+
+        .slide-container {
+            width: 100%;
+            max-width: 1200px; /* Aumentado de 1024px para 1200px */
+            min-height: 600px; /* Aumentado a altura mínima */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* --- Slides Logic --- */
+        .slide {
+            display: none; 
+            width: 100%;
+            animation: fadeIn 0.5s ease-in-out;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .slide.active {
+            display: flex; 
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* --- Tipografia e Elementos Comuns --- */
+        h1 { color: var(--primary); font-size: 2.5rem; margin-bottom: 2.5rem; } /* Fonte aumentada */
+        h2 { font-size: 1.8rem; margin-bottom: 1.2rem; color: var(--primary); } /* Fonte aumentada */
+        h3 { font-size: 1.8rem; color: var(--primary); margin-bottom: 2rem; padding-bottom: 0.8rem; border-bottom: 3px solid var(--warning); display: inline-block; } /* Fonte e borda aumentadas */
+        p { line-height: 1.6; color: #4b5563; font-size: 1.1rem; } /* Fonte base aumentada */
+
+        .highlight-box {
+            background-color: var(--accent);
+            padding: 2.5rem; /* Aumentado padding */
+            border-radius: 0.75rem;
+            border-left: 6px solid var(--primary); /* Borda mais grossa */
+            max-width: 800px; /* Aumentado largura máxima */
+            margin-top: 1.5rem;
+            text-align: left;
+        }
+
+        /* Imagens e Ícones */
+        .img-container { position: relative; display: inline-block; margin-bottom: 2.5rem; }
+        .circle-img { 
+            width: 180px; height: 180px; /* Aumentado tamanho */
+            background: white; padding: 15px; 
+            border-radius: 50%; box-shadow: 0 4px 6px rgba(0,0,0,0.1); 
+            border: 5px solid var(--primary); display: flex; align-items: center; justify-content: center;
+        }
+        .circle-img img { width: 110px; height: 110px; object-fit: contain; }
+        
+        .badge-img {
+            width: 100px; height: 100px; /* Aumentado tamanho */
+            background: white; padding: 5px;
+            border-radius: 50%; box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            position: absolute; bottom: -16px; right: -16px;
+            border: 4px solid var(--danger); display: flex; align-items: center; justify-content: center;
+        }
+        .badge-img img { width: 100%; height: 100%; object-fit: contain; }
+
+        .banner-card {
+            background: var(--primary); color: white; 
+            padding: 5rem; /* Padding bem maior para card grande */
+            border-radius: 1.5rem; box-shadow: 0 15px 25px rgba(0,0,0,0.15);
+            max-width: 900px; /* Largura aumentada */
+            transition: transform 0.3s;
+            width: 100%;
+        }
+        .banner-card:hover { transform: scale(1.02); }
+        .banner-card h2 { color: white; font-size: 3rem; } /* Título bem grande */
+        
+        .banner-card.green { background: var(--success); }
+        .banner-card.green h2 { color: white; }
+        .banner-card.green p { color: #dcfce7; font-size: 1.3rem; }
+
+        /* Grid Layouts */
+        .grid-2 {
+            display: grid; grid-template-columns: 1fr; gap: 2rem; width: 100%; 
+            max-width: 1100px; /* Grid mais largo */
+        }
+        @media (min-width: 768px) { .grid-2 { grid-template-columns: 1fr 1fr; } }
+
+        /* Cards Específicos */
+        .check-card { border: 3px solid var(--success); background: #f0fdf4; padding: 2.5rem; border-radius: 1rem; }
+        .error-card { border: 3px solid var(--danger); background: #fef2f2; padding: 2.5rem; border-radius: 1rem; }
+        .domain-badge { background: white; padding: 0.75rem 1.5rem; border: 1px solid #d1d5db; border-radius: 0.5rem; font-family: monospace; margin: 1rem 0; display: block; font-size: 1.1rem; }
+
+        .feature-card {
+            background: white; padding: 2.5rem; /* Mais espaçamento interno */
+            border-radius: 1rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05); border-left: 6px solid var(--primary);
+            transition: box-shadow 0.3s;
+        }
+        .feature-card:hover { box-shadow: 0 15px 25px rgba(0,0,0,0.15); }
+        .icon-circle { background: var(--accent); width: 80px; height: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; color: var(--primary); }
+
+        /* --- Footer Navigation --- */
+        .nav-footer {
+            background: var(--white);
+            padding: 1.5rem; /* Footer um pouco maior */
+            border-top: 1px solid var(--gray-border);
+            position: sticky; bottom: 0;
+            box-shadow: 0 -4px 6px rgba(0,0,0,0.02);
+        }
+        .nav-container {
+            max-width: 1200px; margin: 0 auto;
+            display: flex; justify-content: space-between; align-items: center;
+        }
+
+        button {
+            padding: 1rem 2rem; /* Botões maiores */
+            border-radius: 0.5rem;
+            font-weight: bold;
+            cursor: pointer;
+            display: flex; align-items: center; gap: 0.75rem;
+            transition: all 0.2s;
+            border: none;
+            font-size: 1.1rem;
+        }
+
+        .btn-prev { background: white; color: var(--primary); border: 2px solid var(--primary); }
+        .btn-prev:hover:not(:disabled) { background: var(--accent); }
+        .btn-prev:disabled { background: var(--gray-light); color: #9ca3af; border-color: #d1d5db; cursor: not-allowed; }
+
+        .btn-next { background: var(--primary); color: white; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        .btn-next:hover { background: var(--primary-dark); transform: translateY(-1px); }
+
+        .btn-finish { background: transparent; color: var(--success); cursor: default; }
+
+        /* Dots Indicator */
+        .dots { display: flex; gap: 0.75rem; }
+        .dot { width: 14px; height: 14px; background: #d1d5db; border-radius: 50%; transition: all 0.3s; }
+        .dot.active { background: var(--primary); width: 28px; border-radius: 14px; }
+
+        /* Rodapé Final */
+        .site-footer {
+            text-align: center; font-size: 0.85rem; color: #6b7280; padding: 1.5rem; background: #f9fafb;
+        }
+
+        /* Utilitários de Ícones (Simulando Lucide com SVG Inline) */
+        .icon { width: 28px; height: 28px; stroke: currentColor; stroke-width: 2; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+        .icon-lg { width: 80px; height: 80px; }
+        .icon-xl { width: 100px; height: 100px; }
+        .text-yellow { color: var(--warning); }
+        .text-white { color: white; }
+        .text-orange { color: #f97316; }
