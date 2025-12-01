@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treinamento de Segurança - Grupo André Guimarães</title>
+    
+    <link rel="stylesheet" href="index.css"
+</head>
+<body>
+
+    <header>
+        <!-- Logo -->
+        <img src="imagens/grupoandreguimaraes_logo.jpg" alt="Grupo André Guimarães" onerror="this.style.display='none'">
+    </header>
+
+    <main>
+        <div class="slide-container">
+            
+            <!-- SLIDE 0: Início -->
+            <div class="slide active" id="slide-0">
+                <h1>Treinamento de Conscientização em Segurança</h1>
+                
+                <div class="img-container">
+                        <img src="imagens/proibido.png" alt="Phishing">
+                </div>
+
+                <div class="highlight-box">
+                    <h2 style="font-size: 1.25rem; margin-bottom: 0.5rem;">Parabéns!</h2>
+                    <p>
+                        Você acabou de participar de uma simulação interna de phishing realizada pela equipe de Segurança da Informação.
+                        Este exercício tem como objetivo ajudar todos os colaboradores a reconhecer tentativas de ataques 
+                        de engenharia social e aumentar a segurança da nossa empresa.
+                    </p>
+                </div>
+            </div>
+
+            <!-- SLIDE 1: Título O que observar -->
+            <div class="slide" id="slide-1">
+                <div class="banner-card">
+                    <!-- Icon Shield -->
+                    <svg class="icon icon-lg text-yellow" style="display:block; margin: 0 auto 1rem;" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                    <h2>"O que você deveria observar?"</h2>
+                    <p style="color: #bfdbfe; margin-top: 1rem;">Vamos analisar os detalhes que denunciam um e-mail falso.</p>
+                </div>
+            </div>
+
+            <!-- SLIDE 2: Remetente -->
+            <div class="slide" id="slide-2">
+                <h3>1. Remetente suspeito ou desconhecido</h3>
+                <div style="background: white; padding: 1rem; border-radius: 0.75rem; box-shadow: 0 4px 6px rgba(0,0,0,0.1); max-width: 800px;">
+                    <img src="imagens/email.jpg" alt="Anatomia do Phishing" style="width: 100%; height: auto; border-radius: 0.5rem;">
+                    <p style="margin-top: 1rem; font-style: italic; font-size: 0.9rem;">Note como o endereço de e-mail não corresponde ao nome da empresa ou possui caracteres estranhos.</p>
+                </div>
+            </div>
+
+            <!-- SLIDE 3: Links -->
+            <div class="slide" id="slide-3">
+                <h3 style="text-align: center;">2. Links que não pertencem aos domínios oficiais</h3>
+                <div class="grid-2" style="margin-top: 2rem;">
+                    <!-- Correto -->
+                    <div class="check-card" style="text-align: center;">
+                        <svg class="icon icon-lg" style="color: var(--success); margin-bottom: 0.5rem;" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                        <h4 style="color: #166534; font-weight: bold; margin-bottom: 0.5rem;">DOMÍNIO SEGURO</h4>
+                        <span class="domain-badge">andreguimaraes.com.br</span>
+                        <p style="font-size: 0.8rem; color: #15803d; margin-top: 0.5rem;">Verifique sempre se o final do endereço corresponde exatamente ao site oficial.</p>
+                    </div>
+                    <!-- Errado -->
+                    <div class="error-card" style="text-align: center;">
+                        <svg class="icon icon-lg" style="color: var(--danger); margin-bottom: 0.5rem;" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg>
+                        <h4 style="color: #991b1b; font-weight: bold; margin-bottom: 0.5rem;">DOMÍNIO SUSPEITO</h4>
+                        <span class="domain-badge">suporte-andre-promo.net</span>
+                        <p style="font-size: 0.8rem; color: #b91c1c; margin-top: 0.5rem;">Desconfie de palavras extras como "promo" ou terminações diferentes.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SLIDE 4: Urgência -->
+            <div class="slide" id="slide-4">
+                <h3>3. Pedidos urgentes ou pressão psicológica</h3>
+                <div style="background: white; padding: 1rem; border-radius: 0.75rem; box-shadow: 0 4px 6px rgba(0,0,0,0.1); max-width: 600px;">
+                    <img src="imagens/urgencia.jpg" alt="Urgência" style="width: 100%; height: 250px; object-fit: cover; object-position: top; border-radius: 0.5rem;">
+                    <div style="margin-top: 1rem; padding: 1rem; background: #fefce8; border-left: 4px solid var(--warning); color: #854d0e; text-align: left;">
+                        <strong>"Faça isso agora ou sua conta será bloqueada!"</strong><br>
+                        <span style="font-size: 0.9rem;">Criminosos usam o senso de urgência para fazer você agir sem pensar.</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SLIDE 5: Anexos -->
+            <div class="slide" id="slide-5">
+                <h3>4. Anexos inesperados</h3>
+                <div style="background: white; padding: 2rem; border-radius: 0.75rem; box-shadow: 0 4px 6px rgba(0,0,0,0.1); max-width: 600px; text-align: center;">
+                    <svg class="icon icon-xl text-orange" style="margin-bottom: 1rem;" viewBox="0 0 24 24"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14 2 14 8 20 8"></polyline><path d="M12 18v-6"></path><path d="M12 17a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"></path></svg>
+                    <p style="font-size: 1.1rem; margin-bottom: 1.5rem;">Você recebeu uma "Fatura" ou "Comprovante" que não esperava?</p>
+                    <div style="background: var(--gray-light); padding: 1rem; border-radius: 0.5rem; text-align: left;">
+                        <p style="font-weight: bold; margin-bottom: 0.5rem;">Cuidado redobrado com:</p>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; font-family: monospace; color: var(--danger);">
+                            <div>● .EXE (Executável)</div>
+                            <div>● .ZIP (Compactado)</div>
+                            <div>● .SCR (Proteção)</div>
+                            <div>● .BAT (Script)</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SLIDE 6: Erros -->
+            <div class="slide" id="slide-6">
+                <h3>5. Erros de escrita e tom incomum</h3>
+                <div style="background: white; padding: 1rem; border-radius: 0.75rem; box-shadow: 0 4px 6px rgba(0,0,0,0.1); max-width: 800px;">
+                    <img src="imagens/texto1.png" alt="Erro de texto" style="width: 100%; height: auto;">
+                    <p style="margin-top: 1rem;">O <strong>Texto 1</strong> apresenta linguagem informal inadequada e erros ortograficos, sinais comuns de fraude.</p>
+                    <p style="margin-top: 1rem;">O <strong>Texto 2</strong> apresenta linguagem formal adequada e sem erros ortograficos, o exemplo adequado de texto.</p>
+                </div>
+            </div>
+
+            <!-- SLIDE 7: Título Proteção -->
+            <div class="slide" id="slide-7">
+                <div class="banner-card green">
+                    <svg class="icon icon-lg text-white" style="display:block; margin: 0 auto 1rem;" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                    <h2>"Como se proteger no dia a dia?"</h2>
+                    <p style="margin-top: 1rem;">Práticas simples que garantem a nossa segurança.</p>
+                </div>
+            </div>
+
+            <!-- SLIDE 8: Cards Práticas -->
+            <div class="slide" id="slide-8">
+                <h3 style="border: none; margin-bottom: 2rem;">Boas práticas de segurança</h3>
+                <div class="grid-2">
+                    <!-- Card 1 -->
+                    <div class="feature-card">
+                        <div class="icon-circle">
+                            <svg class="icon" viewBox="0 0 24 24"><path d="M3 3l7.07 16.97 2.51-7.39 7.39-2.51L3 3z"></path><path d="M13 13l6 6"></path></svg>
+                        </div>
+                        <h4 style="font-weight: bold; margin-bottom: 0.5rem;">Verifique o Link</h4>
+                        <p style="font-size: 0.9rem;">Passe o mouse sobre links antes de clicar para ver o endereço real.</p>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="feature-card">
+                        <div class="icon-circle" style="background: transparent; padding: 0;">
+                            <img src="imagens/senha.jpg" style="height: 100%; object-fit: contain;">
+                        </div>
+                        <h4 style="font-weight: bold; margin-bottom: 0.5rem;">Senhas Protegidas</h4>
+                        <p style="font-size: 0.9rem;">Nunca informe senhas após clicar em links enviados por e-mail.</p>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="feature-card">
+                        <div class="icon-circle" style="background: transparent; padding: 0;">
+                            <img src="imagens/suporte.jpg" style="height: 100%; object-fit: contain; opacity: 0.8;">
+                        </div>
+                        <h4 style="font-weight: bold; margin-bottom: 0.5rem;">Na dúvida, pergunte</h4>
+                        <p style="font-size: 0.9rem;">Confirme com o setor responsável se a solicitação é real.</p>
+                    </div>
+                    <!-- Card 4 -->
+                    <div class="feature-card">
+                        <div class="icon-circle" style="background: transparent; padding: 0;">
+                            <img src="imagens/suporteTI.png" style="height: 100%; object-fit: contain;">
+                        </div>
+                        <h4 style="font-weight: bold; margin-bottom: 0.5rem;">Reporte Sempre</h4>
+                        <p style="font-size: 0.9rem;">Avise o time de TI ou Segurança ao identificar algo suspeito.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SLIDE 9: Obrigado -->
+            <div class="slide" id="slide-9">
+                <div style="background: white; padding: 3rem; border-radius: 1rem; box-shadow: 0 10px 25px rgba(0,0,0,0.1); border-top: 8px solid var(--primary); max-width: 600px;">
+                    <img src="grupoandreguimaraes_logo.jpg" alt="Logo" style="height: 60px; margin-bottom: 1.5rem;" onerror="this.style.display='none'">
+                    <h2 style="color: #1f2937; font-size: 2rem;">Obrigado!</h2>
+                    <p style="font-style: italic; font-size: 1.2rem; color: #4b5563; margin-bottom: 2rem;">
+                        "Agradecemos sua participação. Esse treinamento é parte fundamental da construção de um ambiente mais seguro para todos."
+                    </p>
+                    <div style="width: 100%; height: 8px; background: #e5e7eb; border-radius: 99px; overflow: hidden;">
+                        <div style="width: 100%; height: 100%; background: var(--success);"></div>
+                    </div>
+                    <p style="color: var(--success); font-weight: bold; font-size: 0.9rem; margin-top: 0.5rem;">Treinamento 100% Concluído</p>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <div class="nav-footer">
+        <div class="nav-container">
+            <!-- Botão Voltar -->
+            <button class="btn-prev" id="btnPrev" onclick="changeSlide(-1)" disabled>
+                <svg class="icon" viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                VOLTAR
+            </button>
+
+            <!-- Dots -->
+            <div class="dots" id="dotsContainer">
+                <!-- Dots gerados via JS -->
+            </div>
+
+            <!-- Botão Próximo -->
+            <button class="btn-next" id="btnNext" onclick="changeSlide(1)">
+                PRÓXIMO
+                <svg class="icon" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </button>
+
+             <!-- Concluído (Escondido inicialmente) -->
+            <button class="btn-finish" id="btnFinish" style="display: none;">
+                <svg class="icon" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                Concluído
+            </button>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        Equipe de Segurança da Informação • Simulação interna autorizada
+    </footer>
+
+    <script>
+        // Lógica simples para trocar os slides
+        let currentSlide = 0;
+        const totalSlides = 10;
+
+        function init() {
+            const dotsContainer = document.getElementById('dotsContainer');
+            for (let i = 0; i < totalSlides; i++) {
+                const dot = document.createElement('div');
+                dot.className = i === 0 ? 'dot active' : 'dot';
+                dotsContainer.appendChild(dot);
+            }
+            updateUI();
+        }
+
+        function changeSlide(direction) {
+            const newSlide = currentSlide + direction;
+            if (newSlide >= 0 && newSlide < totalSlides) {
+                currentSlide = newSlide;
+                updateUI();
+            }
+        }
+
+        function updateUI() {
+            // 1. Esconde todos slides e mostra o atual
+            document.querySelectorAll('.slide').forEach((slide, index) => {
+                slide.classList.toggle('active', index === currentSlide);
+            });
+
+            // 2. Atualiza os Dots
+            document.querySelectorAll('.dot').forEach((dot, index) => {
+                dot.className = index === currentSlide ? 'dot active' : 'dot';
+            });
+
+            // 3. Controla estado dos botões
+            const btnPrev = document.getElementById('btnPrev');
+            const btnNext = document.getElementById('btnNext');
+            const btnFinish = document.getElementById('btnFinish');
+
+            btnPrev.disabled = currentSlide === 0;
+
+            if (currentSlide === totalSlides - 1) {
+                btnNext.style.display = 'none';
+                btnFinish.style.display = 'flex';
+            } else {
+                btnNext.style.display = 'flex';
+                btnFinish.style.display = 'none';
+            }
+
+            // Scroll suave para o topo no mobile
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Inicializa ao carregar
+        init();
+    </script>
+</body>
+</html>
